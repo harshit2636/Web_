@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    padding:0;
+    /* box-sizing:border-box; */
+}
+html,body{
+    height:100%;
+    width: 100%;
+}
+body{
+    background-color: aqua;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+#container{
+    height:400px;
+    width:400px;
+    position:relative;
+    background-color: blueviolet;
+    /* overflow: hidden; */
+    /* transition:all ease 0.4s; */
+}
+img{
+    height:100%;
+    width: 100%;
+    object-fit:cover;
+    object-position:center;
+}
+i{
+    color: #fff;
+    font-size:70px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%)scale(0);
+    opacity: 0.9;
+    transition:transform ease 0.4s;
+} 
