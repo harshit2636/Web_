@@ -1,26 +1,13 @@
-let frd=document.querySelector("h5");
+let cont=document.querySelector("#container")
+let icon=document.querySelector("i")
 
-let addfrd=document.querySelector("#add");
-let remove=document.querySelector("#remove")
-let check=0
-
-addfrd.addEventListener("click",function(){
-    if(check==0){
-    frd.innerHTML="Friends"
-    frd.style.color="green"
-    addfrd.innerHTML="Remove Friend"
-    add.style.backgroundColor="black"
-    check=1
-    }
-    else{
-        frd.innerHTML="remove friend"
-        addfrd.innerHTML="Add Friend"
-        frd.style.color="blue"
-        addfrd.style.backgroundColor='blue'
-        check=0
-    }
+cont.addEventListener("dblclick",function(){
+        icon.style.transform= 'translate(-50%,-50%)scale(1)'
+        icon.style.opacity=0.9;
+setTimeout(function(){
+        icon.style.opacity=0;
+},1000)
+setTimeout(function(){
+        icon.style.transform= 'translate(-50%,-50%)scale(0)'
+},2000)
 })
-// remove.addEventListener("click",function(){
-//     frd.innerHTML="remove friend"
-//    frd.style.color="blue"
-// })
