@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<style>
+.container{
+    background-color: blanchedalmond;
+    border:2px solid red;
+    text-align: center;
+    font-size:35px;
+    margin:4px;
+    padding:29px;
+    /* justify-content: center; */
+}
+.container:hover{
+    background-color: green;
+    color:antiquewhite;
+    border-radius: 50%;
+    /* border:yellow; */
+    cursor:pointer;
+}
+#time{
+    font-weight: bold;
+}
+</style>
+<body>
+    <div class="container">Current Date and Time is: <span id="time"></span></div>
+</body>
+<script>
+    //    console.log("This is for date and time")
+       let now= new Date();
+       console.log(now);
+    //    let da= new Date(0);
+    //    console.log(da);
+    //    localStorage.setItem('now',JSON.stringify(now))
+    //    localStorage.getItem(now)
+    //    let newDate=new Date("2023-09-22");
+    //     console.log(newDate)
+        // let date=(year, month,date,hour,min,se,-millisec)
+        let newDate=new Date(2025, 0, 15, 12, 0);
+        console.log(newDate)
+        let yr= newDate.getFullYear()
+        console.log("the year is:",yr)
+        let dt= newDate.getDate()
+        console.log("the date is:",dt)
+        let mon= newDate.getMonth()
+        console.log("the month is:",mon)
+        let hour= newDate.getHours()
+        console.log("the hour is:",hour)
+        newDate.setDate(22)
+        console.log(newDate)
+        newDate.setMinutes(6)
+        console.log(newDate)
+
+        setInterval(updateTime, 1000)
+        function updateTime(){
+            time.innerHTML=new Date()
+        }
+        
+</script>
+</html>
