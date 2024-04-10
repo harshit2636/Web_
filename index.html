@@ -3,15 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>color-Changer</title>
 </head>
+<link rel="stylesheet" href="style.css">
 <body>
-    <div id="container">
-        <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" alt="travel">
-        <i class="ri-heart-3-fill"></i>
-    </div>
-    <script src="script.js"></script>
+    <h1>Color-Changer</h1>
+<div class="box"> 
+   
+    <button class="buttons" id="red"></button>
+    <button class="buttons" id="yellow" style=background-color:yellow></button>
+    <button class="buttons" id="skyblue" style=background-color:skyblue></button>
+    <button class="buttons" id="lightgreen" style=background-color:lightgreen></button>
+    <button class="buttons" id="orange" style=background-color:orange></button>
+    <button class="buttons" id="violet" style=background-color:violet></button>
+  
+</div>
+<script>
+    let buttons=document.querySelectorAll(".buttons");    
+    let body=document.querySelector("body");
+    buttons.forEach(function(button){
+        // console.log(button);
+        button.addEventListener('click',function(e){
+            // console.log(e);
+            console.log(e.target);
+            if(e.target.id==='red'){
+                body.style.backgroundColor= e.target.id;
+            }
+            else if(e.target.id==='yellow'){
+                body.style.backgroundColor= e.target.id;}
+             else if(e.target.id==='skyblue'){
+                 body.style.backgroundColor= e.target.id;}
+             else if(e.target.id==='lightgreen'){
+                    body.style.backgroundColor= e.target.id;}
+            else if(e.target.id==='orange'){
+                    body.style.backgroundColor= e.target.id;}
+            else if (e.target.id=='violet'){
+                    body.style.backgroundColor= e.target.id;}
+            
+            else{
+                body.style.backgroundColor="#000"
+            }
+        })
+    })
+    
+
+</script>
 </body>
 </html>
